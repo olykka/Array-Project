@@ -1,16 +1,15 @@
 
-    const welcome = () => {
+const welcome = () => {
     console.log("Bonjour w tabelach");
-    
+
 }
 welcome();
 
-    const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
 console.log(shopping);
 
-const product = ["oliwa, czaosnek, parmezan, dobry-makaron, pietruszka"];
+const products = ["oliwa, czaosnek, parmezan, dobry-makaron, pietruszka"];
 
-console.log(product);
-
-
-
+products.forEach((product, index) => {
+    console.log(`${index +1}. ${product}`);
+});

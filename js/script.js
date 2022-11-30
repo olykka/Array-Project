@@ -29,7 +29,7 @@ products.forEach((product, index) => {
     const render = () => {
         let htmlString = "";
 
-        for (const task of task) {
+        for (const task of tasks) {
             htmlString += `
             <li>
               ${task.content}
@@ -42,8 +42,8 @@ products.forEach((product, index) => {
 
     const init = () => {
         render();
-
     };
+    
     init();
 }
 

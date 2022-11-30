@@ -37,7 +37,7 @@ products.forEach((product, index) => {
             `;
         }
         
-        document.querySelector(".js-list").innerHTML = htmlString;
+        document.querySelector(".js-tasks").innerHTML = htmlString;
     };
 
     const init = () => {

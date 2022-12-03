@@ -32,7 +32,12 @@ welcome();
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
         const removeButtons = document.querySelectorAll(".js-remove");
-        console.log(removeButtons);
+        removeButtons.forEach((removeButton, index) => {
+            removeButton.addEventListener("click", () => {
+                tasks.splice(index, 1);
+                render();
+            });
+        });
     };
 
     const addNewTask = (newTaskContent) => {

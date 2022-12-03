@@ -17,6 +17,19 @@ welcome();
         },
     ];
 
+    const addNewTask = (newTaskContent) => {
+        tasks.push({
+            content: newTaskContent,
+        });
+
+        render();
+    };
+
+    const removeTask = (taskIndex) => {
+        tasks.splice(taskIndex, 1);
+        render();
+    }
+
     const render = () => {
         let htmlString = "";
 
@@ -34,18 +47,9 @@ welcome();
         const removeButtons = document.querySelectorAll(".js-remove");
         removeButtons.forEach((removeButton, index) => {
             removeButton.addEventListener("click", () => {
-                tasks.splice(index, 1);
-                render();
+                removeTask(index);
             });
         });
-    };
-
-    const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
-
-        render();
     };
 
     const onFormSubmit = (event) => {

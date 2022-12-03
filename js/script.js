@@ -23,12 +23,16 @@ welcome();
         for (const task of tasks) {
             htmlString += `
             <li${task.done ? " style=\"text-decoration: line-through\"" : ""}>
+            <button class="js-remove">usuń</button>
               ${task.content}
             </li>
             `;
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
+
+        const removeButtons = document.querySelectorAll(".js-remove");
+        console.log(removeButtons);
     };
 
     const addNewTask = (newTaskContent) => {

@@ -56,7 +56,7 @@ welcome();
 
         for (const task of tasks) {
             htmlString += `
-            <li${task.done ? " style=\"text-decoration: line-through\"" : ""}>
+            <li${task.done ? " list__item--done" : ""}>
             <button class="js-done">zriobione?</button>
             <button class="js-remove">usuń</button>
               ${task.content}
